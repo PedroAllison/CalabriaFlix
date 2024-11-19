@@ -1,3 +1,4 @@
+//projeto 
 const produtosSection = document.getElementById('filme');
 
 const fetchFilmes = async () => {
