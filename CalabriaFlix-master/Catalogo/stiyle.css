@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+main {
+    padding-top: 70px; /* Ajuste conforme a altura do menu */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0183F5;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Menu Box */
+#menu {
+    background-color: #2b2f337c; /* Cor de fundo translúcida */
+    width: 112%; /* O menu cobre toda a largura da página */
+    padding: 1% 0; /* Espaçamento interno acima e abaixo */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1.7em; /* Tamanho do texto */
+    color: white; /* Cor do texto */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+
+
+/* Título */
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Press Start 2P', fantasy;
+    display: inline-block;
+    position: relative; /* Necessário para animar */
+    animation: bounce 1.5s infinite ease-in-out; /* Aplica animação */
+}
+
+/* Animação */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Sobe 10px */
+    }
+}
+
+
+
+.item-menu {
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    color: rgb(221, 221, 221);
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.item-menu a {
+    text-decoration: none; /* Remove o sublinhado padrão */
+    color: inherit; /* Mantém a cor do texto da .item-menu */
+    border-bottom: 2px solid transparent; /* Adiciona uma borda transparente inicialmente */
+    transition: color 0.3s, border-color 0.3s; /* Animação para borda e cor */
+}
+
+.item-menu a:hover {
+    color: rgb(0, 153, 255); /* Muda a cor do texto no hover */
+    border-bottom: 2px solid rgb(0, 153, 255); /* Adiciona a borda somente sob o texto */
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* Seção de Filmes */
+#filme {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.card-filme {
+    margin-top: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card-filme:hover {
+    transform: scale(1.05);
+}
+
+.card-filme img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.filmeNome {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.filmeSinopse {
+    font-size: 0.9em;
+    padding: 0 10px;
+    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+}
+
+.valor-atual {
+    color: #28a745;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+footer {
+    position: fixed; /* Mantém o footer fixado na parte inferior da tela */
+    bottom: 0; /* Garante que ele esteja alinhado na base da página */
+    left: 0;
+    width: 100%; /* O footer ocupa 100% da largura da página */
+    background-color: #2B2F33;
+    box-sizing: border-box;
+    padding: 1%; /* Ajuste interno para conteúdo */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 0.9em; /* Tamanho ajustado para maior legibilidade */
+    z-index: 10; /* Garante que o footer estará acima de outros elementos */
+}
