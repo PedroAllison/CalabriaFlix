@@ -30,6 +30,8 @@ const getDadosForm = function(){
         filmeJSON.valor = valorFilme.value
     }
 
+    
+
     if(status){
         return filmeJSON
     }else{
@@ -244,6 +246,22 @@ botaoSalvar.addEventListener('click', function(){
         console.log("Não há dados para enviar.");
     }
 })
+
+// Elementos de imagem e campo de entrada
+const imagemInput = document.getElementById('image');
+const imagemPreview = document.getElementById('image-preview');
+
+// Função para atualizar a pré-visualização da imagem
+imagemInput.addEventListener('input', function () {
+    const url = imagemInput.value;
+    if (url) {
+        imagemPreview.src = url;
+        imagemPreview.style.display = 'block'; // Exibe a imagem
+    } else {
+        imagemPreview.style.display = 'none'; // Oculta a imagem se o campo estiver vazio
+    }
+});
+
 
 window.addEventListener('load', function(){
     getFilmes()
