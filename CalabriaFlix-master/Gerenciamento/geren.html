@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Filmes</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js" defer type="module"></script>
+</head>
+<body>
+    <section id="menu">
+
+        <h1 class="logo">ArcabFlix</h1>
+        
+        <nav >
+            <div>
+                <div class="item-menu">
+                    <a href="../Catalogo/index.html">Home</a>
+                </div>
+                <div class="item-menu">
+                    <a href="../Gerenciamento/geren.html">Gerenciamento</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <main>
+        <!-- sessão forms -->
+        <section class="formulario">
+            <div id="div-form">
+                <h1>Cadastro de Filmes</h1>
+                <form id="form">
+                    <label>Título</label>
+                    <input type="text" name="txt-title" id="title">
+                    <label>Imagem</label>
+                    <input type="text" name="txt-image" id="image">
+                    <img id="image-preview" alt="Pré-visualização da imagem" style="max-width: 200px; max-height: 200px; display: none;">
+                    <label>Sinopse</label>
+                    <textarea id="sinopse"></textarea>
+                    <label>Preço</label> 
+                    <input type="text" name="txt_price" id="price"><br>
+                    <div id="salvar" data-action="Salvar">Salvar</div>
+                </form>
+            </div>
+        </section>
+        
+
+        <!-- sessão lista dos filmes -->
+
+        <section id="filmes">
+            <div class="conteudo" id="cardFilme">
+                <!-- 
+                <div id="" class="caixa-filme">
+                    <h2 class="caixa-titulo">Título</h2>
+                    <figure class="caixa-imagem">
+                        <img src="https://i.imgur.com/PemGDxr.png">
+                    </figure>
+                    <h3 class="caixa-sinopse">sinopse</h3>
+                    <h3 class="caixa-valor">valor</h3>
+                    <div>
+                        <span>Editar<img src="icones/editar.png"></span>
+                    </div>
+                    <div>
+                        <span>Excluir<img src="icones/excluir.png"></span></div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        
+    </main>
+
+   <!-- <footer caso precise>
+        <h1>Pedro Allison || Victor Nobrega</h1>
+        <h1>Projeto feito em API, realizado pelo Professor Marcel</h1>
+        <h2>UniFecaf</h2>
+    </footer>-->
+
+
+    
+</body>
+</html>
